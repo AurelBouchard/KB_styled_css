@@ -83,8 +83,12 @@
 
 }
 
-.logi_key {
+.logi {
 	color: #e2f9ff;
+	border-radius: 6px;
+	height: 48px;
+	width: 48px;
+
 	margin: 4px;
 
 	/* vertical-align: middle;*/
@@ -102,36 +106,10 @@
 	transition-delay: 30ms;
 }
 
-.logi_key, .shadowed{
+.shadowed {
 	border-radius: 6px;
-	width: 48px;
-	height: 48px;
-}
-
-.w-sm, .w-sm .shadowed {
-	width: 36px;
-}
-.w-md, .w-md .shadowed {
-	width: 72px;
-}
-.w-lg, .w-lg .shadowed {
-	width: 96px;
-}
-.w-xl, .w-xl .shadowed {
-	width: 120px;
-}
-
-.h-sm, .h-sm .shadowed {
-	height: 36px;
-}
-.h-md, .h-md .shadowed {
-	height: 72px;
-}
-.h-lg, .h-lg .shadowed {
-	height: 96px;
-}
-.h-xl, .h-xl .shadowed {
-	height: 120px;
+	height: 50px;
+	width: 50px;
 }
 
 .large_font {
@@ -144,20 +122,19 @@
 }
 
 
-.logi_key::before,
-.logi_key::after,
+.logi::before,
+.logi::after,
 .shadowed::before,
 .shadowed:focus::after{
 	content: "";
 	display:block;
 	position: absolute;
 	inset: 0;
-	height: inherit;
-	width: inherit;
+	height: 48px;
+	width: 48px;
 }
 
-.logi_key::before{
-	/* dark is down-side */
+.logi::before{
 	background-image: linear-gradient(
 		-38deg,
 		rgba(0, 0, 0, 0.4), 
@@ -165,36 +142,23 @@
 	z-index: -3;
 }
 
-.logHHi_key::after{
-	background-image: radial-gradient(
-		ellipse, 
+.logi::after{
+	background-image: radial-gradient(circle, 
 	rgba(0,0,0,0) 58%, 
 	#303030 68%, 
 	#303030);
 	z-index: -5;
 }
 
-.curve {
-	/* border: 1px solid red; */
-	border-radius: 24px;
-	box-shadow: inset 0 0 3px 1px #303030;
-	background-color: transparent;
-	width: inherit;
-	height: inherit;
-	z-index: -1;
-}
-
-.shadodwed::before{
-	/* dark is up-side */
-	background-image: linear-gradient(
-		-38deg,
-		#707070, 
-		#272727);
-	z-index: 1;
+.shadowed::before{
+	background-image: linear-gradient(-38deg,
+	 #707070, 
+	 #272727);
+	z-index: -5;
 }
 
 
-.logi_key:hover {
+.logi:hover {
 	box-shadow: 0 0 1px 2px #e2f9ff;
 	transition-duration: 125ms;
 }
@@ -205,11 +169,11 @@
 	text-decoration: underline;
 	
 	transition-duration: 125ms;
-	z-index: 3;
+	z-index: -1;
 }
 
 
-.logi_key:active {
+.logi:active {
 	box-shadow: 0 0 0px 1px #4c5253;
 	transition-duration: 00ms;
 }
@@ -234,7 +198,7 @@
 }
 
 #azerty {
-	width: 450px;
+	/*width: 450px;*/
 }
 
 
